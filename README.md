@@ -21,7 +21,7 @@
 
 | **노민호** | **정명훈** | 
 | :------: |  :------: |
-| [<img src="[https://img.freepik.com/premium-vector/coding-programmer-developer-flat-vector-illustration-template_128772-814.jpg?size=626&ext=jpg](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZNQqKJm7dogGhlrvuB34PE-gmzP9rAi4Gdg&s)" height=150 width=150> <br/> @yeon1615](https://github.com/rmh6363) | [<img src="https://avatars.githubusercontent.com/u/112460466?v=4" height=150 width=150> <br/> @Cheorizzang](https://github.com/Cheorizzang) |
+| [<img src="https://img.freepik.com/premium-vector/coding-programmer-developer-flat-vector-illustration-template_128772-814.jpg?size=626&ext=jpg" height=150 width=150> <br/> @rmh6363](https://github.com/rmh6363) | 
 
 </div>
 
