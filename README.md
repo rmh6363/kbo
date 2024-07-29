@@ -1,7 +1,7 @@
 # KBO
 # 📖 국내 프로야구 KBO 관련 기록 확인 사이트
 
-![readme_mockup2](https://user-images.githubusercontent.com/112460466/210706312-6a44b60d-a42e-4210-b334-9e5983f70fb3.png)
+![readme_mockup2](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkyikfg5QLUV2P7oUJHYySNVkCeGcmtY5VSw&s)
 
 - 배포 URL : https://ohmycode-readme.netlify.app
 - Test ID : readme@test.com
