@@ -1,38 +1,37 @@
-# Gradle
-.gradle/
+HELP.md
+.gradle
 build/
-out/
 !gradle/wrapper/gradle-wrapper.jar
-!gradle/wrapper/gradle-wrapper.properties
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-# Spring Boot
-*.log
-*.jar
-*.war
-*.class
-*.db
-*.h2.db
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
 
-# IDE 설정 파일
-.idea/
+### IntelliJ IDEA ###
+.idea
+*.iws
 *.iml
 *.ipr
-*.iws
-*.class
-*.project
-*.settings/
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
 
-# OS 파일
-.DS_Store
-Thumbs.db
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
 
-# 환경 설정 파일
-.env
-*.properties
-
-# 기타
-*.log
-*.tmp
-*.bak
-*.swp
-*.md
+### VS Code ###
+.vscode/
