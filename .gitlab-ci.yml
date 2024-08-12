@@ -3,7 +3,7 @@ stages:
   - test
   - deploy
 variables:
-  DOCKER_HOST: tcp://docker:2375/
+  DOCKER_HOST: tcp://121.143.176.115:2375/
 # 빌드 단계
 build:
   stage: build
