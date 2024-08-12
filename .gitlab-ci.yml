@@ -1,10 +1,29 @@
 stages:
   - build
+  - test
+  - deploy
 
+# 빌드 단계
 build:
   stage: build
-  image: docker:latest  # Docker 이미지를 사용
-  services: []  # Docker-in-Docker 서비스 사용하지 않음
+  image: docker:latest
   script:
-    - echo "Building the project..."
-    - docker --version  # Docker 버전 확인
+    - docker build -t rmh63/kbo:latest .
+    - docker push rmh63/kbo:latest
+
+# 테스트 단계
+test:
+  stage: test
+  image: openjdk:21-jdk
+  script:
+    - ./gradlew test  # Gradle 테스트 실행
+
+# 배포 단계
+deploy:
+  stage: deploy
+  image: bitnami/kubectl  # Kubernetes 클라이언트 이미지
+  script:
+    - kubectl apply -f deployment.yaml
+    - kubectl apply -f service.yaml
+  only:
+    - main  # main 브랜치에만 배포
