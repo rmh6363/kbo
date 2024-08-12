@@ -1,0 +1,10 @@
+stages:
+  - build
+
+build:
+  stage: build
+  image: docker:latest  # Docker 이미지를 사용
+  services:
+    - docker:dind  # Docker-in-Docker 서비스 사용
+  script:
+    - echo "Building the project..."
