@@ -7,4 +7,4 @@ build:
   services: []  # Docker-in-Docker 서비스 사용하지 않음
   script:
     - echo "Building the project..."
-    - docker --version  # Docker 버전 확인 (선택 사항)
+    - docker --version  # Docker 버전 확인
