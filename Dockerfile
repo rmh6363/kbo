@@ -7,6 +7,9 @@ WORKDIR /app
 # 현재 디렉터리의 모든 파일을 컨테이너의 /app으로 복사
 COPY . .
 
+# gradlew에 실행 권한 부여
+RUN chmod +x gradlew
+
 # Gradle 빌드 실행 (필요한 경우)
 RUN ./gradlew build
 
