@@ -1,17 +1,18 @@
-# 기본 이미지 설정
 FROM openjdk:21-jdk
 
-# 작업 디렉터리 생성
+# 작업 디렉터리 설정
 WORKDIR /app
 
-# 현재 디렉터리의 모든 파일을 컨테이너의 /app으로 복사
+# 필요한 패키지 설치 (findutils 포함)
+RUN apt-get update && apt-get install -y findutils && rm -rf /var/lib/apt/lists/*
+
+# 소스 코드 복사
 COPY . .
 
 # gradlew에 실행 권한 부여
 RUN chmod +x gradlew
 
-# Gradle 빌드 실행 (필요한 경우)
+# Gradle 빌드 실행
 RUN ./gradlew build
 
-# 애플리케이션 실행
-CMD ["java", "-jar", "kbo.jar"]  # your-app.jar는 실제 JAR 파일 이름으로 수정
+# 애플리케이션 실행 (여기에 추가적인 명령어를 넣을 수 있습니다)
