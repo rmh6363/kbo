@@ -1,12 +1,15 @@
 stages:
   - build
   - test
-  - deploy
 
 # 빌드 단계
 build:
   stage: build
   image: docker:latest
+  variables:
+    DOCKER_HOST: tcp://121.143.176.115:2375  # Docker Host 설정
+  before_script:
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   script:
     - docker build -t rmh63/kbo:latest .
     - docker push rmh63/kbo:latest
@@ -17,13 +20,3 @@ test:
   image: openjdk:21-jdk
   script:
     - ./gradlew test  # Gradle 테스트 실행
-
-# 배포 단계
-deploy:
-  stage: deploy
-  image: bitnami/kubectl  # Kubernetes 클라이언트 이미지
-  script:
-    - kubectl apply -f deployment.yaml
-    - kubectl apply -f service.yaml
-  only:
-    - main  # main 브랜치에만 배포
