@@ -11,6 +11,8 @@ build:
   before_script:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   script:
+    - pwd  # 현재 작업 디렉터리 출력
+    - ls -l  # 현재 디렉터리의 파일 목록 출력
     - docker build -t rmh63/kbo:latest .
     - docker push rmh63/kbo:latest
 
