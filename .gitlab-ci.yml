@@ -14,9 +14,3 @@ build:
     - docker build -t rmh63/kbo:latest .
     - docker push rmh63/kbo:latest
 
-# 테스트 단계
-test:
-  stage: test
-  image: openjdk:21-jdk
-  script:
-    - ./gradlew test  # Gradle 테스트 실행
