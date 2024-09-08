@@ -7,7 +7,6 @@ build:
   stage: build
   image: docker:latest
   variables:
-    DOCKER_HOST: tcp://121.143.176.115:2375  # Docker Host 설정
   before_script:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   script:
